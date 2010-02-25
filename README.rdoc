@@ -1,0 +1,41 @@
+= Skeleton generator
+
+A Thor based generator to rapidly create a skeleton file structure based on a YAML config file.
+   
+== Install
+$ gem install skeleton_creator
+
+$ thor install skeleton.thor
+
+Check it is installed:
+$ thor -T
+
+See how to use it:
+$ thor skeleton --help 
+
+== Usage
+
+Specific 'local' template:
+$ thor skeleton my-templates/my-skeleton.yaml -R testing3 -T -F
+
+To test global templates usage, copy the apps.yaml in sample/templates into ~/.skeletons
+
+Using templates inside from ~/.skeletons:
+$ thor skeleton apps.yaml -D testing3 -T -F
+
+Using template to created multiple dirs:
+$ thor skeleton apps.yaml -D testing3 testing4 -T
+                                                    
+Faking it with -F option:
+$ thor skeleton apps.yaml -D testing3 testing4 -T -F
+
+Using template to created multiple dirs:
+$ thor skeleton apps.yaml -D testing3 testing4 -T -R ~/skeletons-here
+
+Generates the following:
+~/skeletons-here/testing3/
+~/skeletons-here/testing4/
+ 
+== Community
+
+Suggestions for improvement are welcome!
