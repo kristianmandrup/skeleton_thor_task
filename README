@@ -1,0 +1,28 @@
+= Skeleton generator
+
+A Thor based generator to rapidly create a skeleton file structure based on a YAML config file.
+
+Specific 'local' template:
+$ thor skeleton my-templates/my-skeleton.yaml -R testing3 -T -F
+
+Using templates inside from ~/.skeletons:
+$ thor skeleton apps.yaml -D testing3 -T -F
+
+Using template to created multiple dirs:
+$ thor skeleton apps.yaml -D testing3 testing4 -T
+                                                    
+Faking it with -F option:
+$ thor skeleton apps.yaml -D testing3 testing4 -T -F
+
+Using template to created multiple dirs:
+$ thor skeleton apps.yaml -D testing3 testing4 -T -R ~/skeletons-here
+
+Generates the following:
+~/skeletons-here/testing3/
+~/skeletons-here/testing4/
+ 
+== TODO 
+   
+== Community
+
+Suggestions for improvement are welcome!
